@@ -18,7 +18,6 @@ def get_songs(artist_name):
     all_albums = get_all_albums(artist_name)
 
     for a in all_albums:
-        print(a)
         time.sleep(5) # to avoid time out errors
         album = genius.search_album(a[1], artist_name)
         album = album.to_dict()
@@ -33,4 +32,4 @@ def get_songs(artist_name):
 
     return all_albums
 
-(print(get_songs("Taylor Swift")))
+# print(get_songs("Taylor Swift"))
